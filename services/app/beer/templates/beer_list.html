@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  {% for beer in beers %}
+  <tr>
+    <td>{{ beer.id }}</td>
+    <td>{{ beer.name }}</td>
+    <td>{% url 'beer:edit' %}</td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<a href="{% url 'beer:create' %}">Create beer</a>
+{% endblock %}

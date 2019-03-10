@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form method="post" action="{% url 'beer:create' %}">
+  {% csrf_token %}
+  <input type="text" name="name">
+  <label for="name">Name</label>
+  <input type="submit" value="Create">
+</form>
+{% endblock %}

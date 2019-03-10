@@ -1,0 +1,29 @@
+---
+
+version: '3.7'
+services:
+  app:
+    build:
+      context: ./services/app
+    volumes:
+      - ./services/app:/usr/src/app
+    ports:
+      - "8000:8000"
+  celery_app:
+    command: celery -A pivo worker
+    build:
+      context: ./services/app
+    volumes:
+      - ./services/app:/usr/src/app
+    depends_on:
+      - rabbit
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_DB: "pivo_db"
+    volumes:
+      - data:/var/lib/postgresql/data
+  rabbit:
+    image: rabbitmq
+volumes:
+  data:
