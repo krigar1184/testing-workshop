@@ -42,7 +42,7 @@ powerline-status==2.7
 prompt-toolkit==1.0.15
 psutil==5.4.7
 ptyprocess==0.6.0
-py==1.5.4
+py==1.10.0
 pyasn1==0.4.4
 pycodestyle==2.5.0
 pycparser==2.18
