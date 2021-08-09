@@ -16,7 +16,7 @@ flake8==3.7.2
 funcsigs==1.0.2
 future==0.17.1
 futures==3.2.0
-Glances==3.0.1
+Glances==3.2.1
 graphviz==0.10.1
 greenlet==0.4.13
 idna==2.7
