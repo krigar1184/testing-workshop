@@ -29,7 +29,7 @@ mccabe==0.6.1
 more-itertools==4.3.0
 msgpack==0.5.6
 objgraph==3.4.0
-paramiko==2.4.1
+paramiko==2.10.1
 parso==0.3.1
 pathlib2==2.3.2
 pdbpp==0.9.2
